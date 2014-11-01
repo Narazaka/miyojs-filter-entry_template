@@ -1,0 +1,29 @@
+{
+	"name": "miyojs-filter-entry_template",
+	"version": "1.0.0",
+	"description": "entry_template - entry template filter for Miyo",
+	"keywords": ["miyojs", "miyojs-filter"],
+	"main": "entry_template.js",
+	"scripts": {
+		"test": "mocha"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"coffee-script": ">= 1.8.0",
+		"mocha": ">= 1.20.1",
+		"chai": ">= 1.9.2",
+		"sinon": ">= 1.10.3",
+		"istanbul": ">= 0.3.2",
+		"miyojs": ">= 1.1.0"
+	},
+	"author": {
+		"name": "narazaka",
+		"url": "http://narazaka.net/"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Narazaka/miyojs-filter-entry_template.git"
+	}
+}
