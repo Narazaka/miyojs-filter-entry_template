@@ -1,6 +1,6 @@
 {
 	"name": "miyojs-filter-entry_template",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "entry_template - entry template filter for Miyo",
 	"keywords": ["miyojs", "miyojs-filter"],
 	"main": "entry_template.js",
@@ -8,14 +8,16 @@
 		"test": "mocha"
 	},
 	"dependencies": {
+		"es6-promise": "^2.0.0"
 	},
 	"devDependencies": {
 		"coffee-script": ">= 1.8.0",
-		"mocha": ">= 1.20.1",
+		"mocha": ">= 2.0.0",
 		"chai": ">= 1.9.2",
+		"chai-as-promised": ">= 4.1.1",
 		"sinon": ">= 1.10.3",
 		"istanbul": ">= 0.3.2",
-		"miyojs": ">= 1.1.0"
+		"miyojs": ">= 2.0.0"
 	},
 	"author": {
 		"name": "narazaka",

@@ -4,10 +4,10 @@ COFFEE = $(wildcard *.coffee)
 JS = $(COFFEE:.coffee=.js)
 all: $(JS)
 .coffee.js:
-	coffee -cmb $^
+	coffee -cm $^
 clean:
 	rm *.js *.map
 test:
 	mocha test
 cov:
-	istanbul.cmd cover --report html c:\usr\nodist\bin\node_modules\mocha\bin\_mocha
+	istanbul.cmd cover node_modules\mocha\bin\_mocha

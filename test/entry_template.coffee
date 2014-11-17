@@ -1,9 +1,22 @@
-chai = require 'chai'
+if require?
+	chai = require 'chai'
+else
+	chai = @chai
 chai.should()
 expect = chai.expect
-sinon = require 'sinon'
-Miyo = require 'miyojs'
-MiyoFilters = require '../entry_template.js'
+if require?
+	chaiAsPromised = require 'chai-as-promised'
+else
+	chaiAsPromised = @chaiAsPromised
+chai.use chaiAsPromised
+if require?
+	sinon = require 'sinon'
+	Miyo = require 'miyojs'
+	MiyoFilters = require '../entry_template.js'
+else
+	sinon = @sinon
+	Miyo = @Miyo
+	MiyoFilters = @MiyoFilters
 
 describe 'template filter', ->
 	ms = null
@@ -28,5 +41,5 @@ describe 'template filter', ->
 			filters: ['value', 'entry_template']
 			argument:
 				value: '1${two}3${four}5'
-		return_value = ms.call_filters entry, request, id, stash
-		return_value.should.be.equal '12345'
+		ms.call_filters entry, request, id, stash
+		.should.eventually.be.equal '12345'
